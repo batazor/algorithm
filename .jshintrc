@@ -1,0 +1,8 @@
+{
+  "asi": true,
+  "strict": true,
+  "esnext": true,
+  "curly": true,
+  "undef": true,
+  "unused": true
+}
