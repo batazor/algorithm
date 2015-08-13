@@ -1,6 +1,5 @@
 # Algorithm
 
-
 ## TODO
 
 + create reverse algorithm
