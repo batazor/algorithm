@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int Factorial(int x) {
   if (x <= 1) {
