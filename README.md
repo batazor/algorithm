@@ -4,36 +4,44 @@
 
 - Algorithms
   - Search
-    - [x] Binary search `O(log n)`
-    - [ ] Simple search `O(n)`
+    - [Binary search `O(log n)`](./src/search/binary)
+    - Simple search `O(n)`
   - Sort
-    - [ ] Quick search `O(n * log n)`
-    - [ ] Select search `O(n^2)`
+    - [Buble search](./src/sorting/bubble)
+    - [Heap search](./src/sorting/heap)
+    - [Quick search `O(n * log n)`](./src/sorting/quick)
+    - Select search `O(n^2)`
+  - Math
+    - [Factorial](./src/math/factorial)
+    - [Fibonacci](./src/math/fibonacci)
+    - [getDeterminant](./src/math/getDeterminant)
   - Other
-    - [ ] Commivoyager problem `O(n!)`
+    - Commivoyager problem `O(n!)`
 - Structures
+  - Other
+    - [Circular buffer](./src/struct/circularBuffer)
   - Linear
-    - [ ] Lists
-    - [ ] Sets
-    - [ ] Tuples
-    - [ ] Queues
-    - [ ] Stacks
-    - [ ] Heaps
+    - [Lists](./src/struct/linear/list)
+    - Sets
+    - [Tuples](./src/struct/linear/tuples)
+    - Queues
+    - Stacks
+    - Heaps
   - Non-Linear
-    - [ ] Trees
-    - [ ] Tables
-    - [ ] Containers
+    - Trees
+    - Tables
+    - Containers
   - Homogeneous
-    - [ ] 2D Arrays
-    - [ ] MultiDArrays
+    - 2D Arrays
+    - MultiDArrays
   - Heterogeneous
-    - [ ] Linked Lists
-    - [ ] Ordered Lists
-    - [ ] UnOrdered Lists
+    - Linked Lists
+    - Ordered Lists
+    - UnOrdered Lists
   - Dynamic
-    - [ ] Dictionaries
-    - [ ] TreeSets
-    - [ ] Sequences
+    - Dictionaries
+    - TreeSets
+    - Sequences
 
 ## Refs
 
