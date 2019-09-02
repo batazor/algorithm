@@ -6,6 +6,7 @@
   - Search
     - [Binary search `O(log n)`](./src/search/binary)
     - Simple search `O(n)`
+    - Breadth-First Search BFS
   - Sort
     - [Buble search](./src/sorting/bubble)
     - [Heap search](./src/sorting/heap)
