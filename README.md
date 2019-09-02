@@ -1,7 +1,16 @@
 # Algorithm
 
-## ROADMAP
+## Algorithms && structures
 
+- Algorithms
+  - Search
+    - [x] Binary search `O(log n)`
+    - [ ] Simple search `O(n)`
+  - Sort
+    - [ ] Quick search `O(n * log n)`
+    - [ ] Select search `O(n^2)`
+  - Other
+    - [ ] Commivoyager problem `O(n!)`
 - Structures
   - Linear
     - [ ] Lists
