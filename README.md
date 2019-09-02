@@ -10,7 +10,7 @@
     - [Buble search](./src/sorting/bubble)
     - [Heap search](./src/sorting/heap)
     - [Quick search `O(n * log n)`](./src/sorting/quick)
-    - Select search `O(n^2)`
+    - [Select search `O(n^2)`](./src/sorting/select)
   - Math
     - [Factorial](./src/math/factorial)
     - [Fibonacci](./src/math/fibonacci)
