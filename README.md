@@ -47,3 +47,4 @@
 ## Refs
 
 - [book: Learn Data Structures and Algorithms with Golang](https://www.packtpub.com/application-development/learn-data-structures-and-algorithms-golang)
+- [book: Grokking Algorithms: An illustrated guide for programmers and other curious people](https://www.manning.com/books/grokking-algorithms)
