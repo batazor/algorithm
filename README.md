@@ -16,8 +16,12 @@
     - [Factorial](./src/math/factorial)
     - [Fibonacci](./src/math/fibonacci)
     - [getDeterminant](./src/math/getDeterminant)
-  - Other
-    - Commivoyager problem `O(n!)`
+  - Graph
+    - Search
+      - Dijkstra's Algorithm
+      - Bellman–Ford
+    - Other
+      - Commivoyager problem `O(n!)`
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)
