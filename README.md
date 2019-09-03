@@ -18,7 +18,7 @@
     - [getDeterminant](./src/math/getDeterminant)
   - Graph
     - Search
-      - Dijkstra's Algorithm
+      - [Dijkstra's Algorithm](./src/graph/dijkstra)
       - Bellman–Ford
     - Other
       - Commivoyager problem `O(n!)`
