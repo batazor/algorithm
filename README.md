@@ -22,6 +22,8 @@
       - Bellman–Ford
     - Other
       - Commivoyager problem `O(n!)`
+  - Crypt
+    - [RSA](./src/crypt/RSA)
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)
