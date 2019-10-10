@@ -24,6 +24,9 @@
       - Commivoyager problem `O(n!)`
   - Crypt
     - [RSA](./src/crypt/RSA)
+    - Caesar cipher
+    - Vigenere cipher
+    - Hill cipher
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)
