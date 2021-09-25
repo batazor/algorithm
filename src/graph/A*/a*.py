@@ -63,7 +63,7 @@ class Maze:
             locations.append(MazeLocation(ml.row - 1, ml.column))
         if ml.column + 1 < self._columns and self._grid[ml.row][ml.column + 1] != Cell.BLOCKED:
             locations.append(MazeLocation(ml.row, ml.column + 1))
-        if ml.column - 1 >= 0 and self._grid[ml.row, ml.column - 1] != Cell.BLOCKED:
+        if ml.column - 1 >= 0 and self._grid[ml.row][ml.column - 1] != Cell.BLOCKED:
             locations.append(MazeLocation(ml.row, ml.column - 1))
 
         return locations
@@ -83,8 +83,8 @@ class Maze:
 
 if __name__ == "__main__":
     maze: Maze = Maze()
-    print(maze)
 
+    # Test DFS
     solution1: Optional[Node[MazeLocation]] = dfs(maze.start, maze.goal_test, maze.successors)
     if solution1 is None:
         print("No solution found using depth-first search!")
