@@ -1,16 +1,10 @@
 from enum import Enum
 from typing import List, NamedTuple, Callable, Optional
 import random
-from math import sqrt
 
-import importlib.util
-
-spec = importlib.util.spec_from_file_location("generic_search", "../../search/common/generic_search.py")
-foo = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(foo)
-
-
-# from generic_search import dfs, bfs, node_to_path, aster, Node
+import sys
+sys.path.append('../../search/common')
+from generic_search import dfs, node_to_path, Node
 
 
 class Cell(str, Enum):
@@ -57,7 +51,45 @@ class Maze:
             output += "".join([c.value for c in row]) + "\n"
         return output
 
+    def goal_test(self, ml: MazeLocation) -> bool:
+        return ml == self.goal
+
+    def successors(self, ml: MazeLocation) -> List[MazeLocation]:
+        locations: List[MazeLocation] = []
+
+        if ml.row + 1 < self._rows and self._grid[ml.row + 1][ml.column] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row + 1, ml.column))
+        if ml.row - 1 >= 0 and self._grid[ml.row - 1][ml.column] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row - 1, ml.column))
+        if ml.column + 1 < self._columns and self._grid[ml.row][ml.column + 1] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row, ml.column + 1))
+        if ml.column - 1 >= 0 and self._grid[ml.row, ml.column - 1] != Cell.BLOCKED:
+            locations.append(MazeLocation(ml.row, ml.column - 1))
+
+        return locations
+
+    def mark(self, path: List[MazeLocation]):
+        for maze_location in path:
+            self._grid[maze_location.row][maze_location.column] = Cell.PATH
+        self._grid[self.start.row][self.start.column] = Cell.START
+        self._grid[self.goal.row][self.goal.column] = Cell.GOAL
+
+    def clear(self, path: List[MazeLocation]):
+        for maze_location in path:
+            self._grid[maze_location.row][maze_location.column] = Cell.EMPTY
+        self._grid[self.start.row][self.start.column] = Cell.START
+        self._grid[self.goal.row][self.goal.column] = Cell.GOAL
+
 
 if __name__ == "__main__":
     maze: Maze = Maze()
-    print(Maze)
+    print(maze)
+
+    solution1: Optional[Node[MazeLocation]] = dfs(maze.start, maze.goal_test, maze.successors)
+    if solution1 is None:
+        print("No solution found using depth-first search!")
+    else:
+        path1: List[MazeLocation] = node_to_path(solution1)
+        maze.mark(path1)
+        print(maze)
+        maze.clear(path1)
