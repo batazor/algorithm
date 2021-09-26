@@ -20,15 +20,17 @@ graph["b"]["fin"] = 5
 graph["fin"] = {}
 
 infinity = float("inf")
-costs = {}
-costs["a"] = 6
-costs["b"] = 2
-costs["fin"] = infinity
+costs = {
+    "a": 6,
+    "b": 2,
+    "fin": infinity,
+}
 
-parents = {}
-parents["a"] = "start"
-parents["b"] = "start"
-parents["in"] = None
+parents = {
+    "a": "start",
+    "b": "start",
+    "in": None,
+}
 
 processed = []
 
@@ -44,4 +46,4 @@ while node is not None:
     processed.append(node)
     node = find_lowest_cost_node(costs)
 
-print costs
+print(costs)
