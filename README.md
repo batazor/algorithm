@@ -29,6 +29,9 @@
     - Caesar cipher
     - Vigenere cipher
     - Hill cipher
+  - [Contstraint satisfaction problem (CSP)](./src/csp)
+    - map coloring
+    - queens
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)

@@ -1,0 +1,1 @@
+### Contstraint satisfaction problem (CSP)
