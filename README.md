@@ -32,6 +32,7 @@
   - [Contstraint satisfaction problem (CSP)](./src/csp)
     - map coloring
     - queens
+  - [Genetic algorithm](./src/genetic)
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)
