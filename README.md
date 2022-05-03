@@ -36,6 +36,7 @@
 - Structures
   - Other
     - [Circular buffer](./src/struct/circularBuffer)
+    - [Thunk](./src/struct/thunk)
   - Linear
     - [Lists](./src/struct/linear/list)
     - Sets
