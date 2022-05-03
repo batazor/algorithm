@@ -41,7 +41,7 @@
     - [Lists](./src/struct/linear/list)
     - Sets
     - [Tuples](./src/struct/linear/tuples)
-    - Queues
+    - [Queues](./src/struct/queue)
     - Stacks
     - Heaps
   - Non-Linear
