@@ -6,13 +6,15 @@ root = true
 # Unix-style newlines with a newline ending every file
 [*]
 end_of_line = lf
-insert_final_newline = true
 charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
 
 # Tab indentation (no size specified)
 [{Makefile,go.mod,go.sum,*.go,*.go.tmpl}]
 indent_style = tab
-indent_size = 8
+indent_size = 4
 
 # Indentation override for all JS under lib directory
 [**.js]
@@ -22,4 +24,21 @@ indent_size = 2
 # Matches the exact files either package.json or .travis.yml
 [{package.json, *.yaml}]
 indent_style = space
+indent_size = 2
+
+# Use tabs
+[**.mk]
+indent_style = tab
+indent_size = 4
+
+# Use tabs
+[**.xml]
+indent_style = space
+indent_size = 4
+
+[*.rs]
+trim_trailing_whitespace = true
+indent_size = 4
+
+[*.Dockerfile]
 indent_size = 2
