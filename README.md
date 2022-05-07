@@ -46,6 +46,12 @@
     - Heaps
   - Non-Linear
     - Trees
+      - B-Tree
+        - b-tree
+        - b+ tree
+        - b* tree
+        - order statistic trees
+        - rb-tree
     - Tables
     - Containers
   - Homogeneous
