@@ -7,8 +7,24 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	tree := New(2)
+	// create a b-tree
+	tree := New(3)
 
-	var expectNode *BTreeNode
-	assert.Equal(t, expectNode, tree.Search(1))
+	// expect empty b-tree
+	var emptytNode *BTreeNode
+	assert.Equal(t, emptytNode, tree.Search(1))
+
+	tree.Insert(10)
+	tree.Insert(20)
+	tree.Insert(5)
+	tree.Insert(6)
+	tree.Insert(12)
+	tree.Insert(30)
+	tree.Insert(7)
+	tree.Insert(17)
+
+	tree.Traverse()
+
+	assert.Equal(t, emptytNode, tree.Search(7))
+	assert.Equal(t, emptytNode, tree.Search(15))
 }
