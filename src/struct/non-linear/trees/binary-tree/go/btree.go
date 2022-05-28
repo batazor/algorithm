@@ -100,3 +100,81 @@ func (t *Tree[T]) Max() *Tree[T] {
 func (t *Tree[T]) Value() *T {
 	return t.val
 }
+
+// PreOrder traversal is to visit the root first.
+// Then traverse the left subtree.
+// Finally, traverse the right subtree.
+func (t *Tree[T]) PreOrder() []T {
+	res := []T{*t.Value()}
+
+	if t.left != nil {
+		res = append(res, t.left.PreOrder()...)
+	}
+
+	if t.right != nil {
+		res = append(res, t.right.PreOrder()...)
+	}
+
+	return res
+}
+
+// InOrder traversal is to traverse the left subtree first.
+// Then visit the root.
+// Finally, traverse the right subtree.
+func (t *Tree[T]) InOrder() []T {
+	var res []T
+
+	if t.left != nil {
+		res = append(res, t.left.InOrder()...)
+	}
+
+	res = append(res, *t.Value())
+
+	if t.right != nil {
+		res = append(res, t.right.InOrder()...)
+	}
+
+	return res
+}
+
+// PostOrder traversal is to traverse the left subtree first.
+// Then traverse the right subtree.
+// Finally, visit the root.
+func (t *Tree[T]) PostOrder() []T {
+	var res []T
+
+	if t.left != nil {
+		res = append(res, t.left.PostOrder()...)
+	}
+	if t.right != nil {
+		res = append(res, t.right.PostOrder()...)
+	}
+
+	res = append(res, *t.Value())
+
+	return res
+}
+
+func (t *Tree[T]) BFS(level int) map[int][]T {
+	res := map[int][]T{}
+
+	res[level] = append(res[level], *t.Value())
+
+	if t.left != nil {
+		leftRes := t.left.BFS(level + 1)
+
+		for i := range leftRes {
+			res[i] = append(res[i], leftRes[i]...)
+		}
+	}
+
+	if t.right != nil {
+		rightRes := t.right.BFS(level + 1)
+
+		for i := range rightRes {
+			res[i] = append(res[i], rightRes[i]...)
+		}
+	}
+
+	return res
+}
