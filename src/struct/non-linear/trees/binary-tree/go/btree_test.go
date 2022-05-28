@@ -35,7 +35,11 @@ func TestTree(t *testing.T) {
 	tree.Delete(9)
 	tree.Delete(1)
 	tree.Insert(10)
-	assert.Equal(t, 10, *tree.Max().Value())
+	tree.Insert(11)
+	assert.Equal(t, 11, *tree.Max().Value())
+
+	// aggregation operation
+	assert.Equal(t, 3, tree.Depth(0))
 }
 
 func TestTreeOrder(t *testing.T) {
@@ -71,4 +75,7 @@ func TestTreeOrder(t *testing.T) {
 		3: {"C", "E", "H"},
 	}
 	assert.Equal(t, bfs, tree.BFS(0))
+
+	// aggregation operation
+	assert.Equal(t, 3, tree.Depth(0))
 }

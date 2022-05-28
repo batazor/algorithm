@@ -178,3 +178,25 @@ func (t *Tree[T]) BFS(level int) map[int][]T {
 
 	return res
 }
+
+func (t *Tree[T]) Depth(depth int) int {
+	leftDepth := 0
+	if t.left != nil {
+		leftDepth = t.left.Depth(depth + 1)
+	}
+
+	rightDepth := 0
+	if t.right != nil {
+		rightDepth = t.right.Depth(depth + 1)
+	}
+
+	if leftDepth >= rightDepth && leftDepth > depth {
+		return leftDepth
+	}
+
+	if rightDepth >= leftDepth && rightDepth > depth {
+		return rightDepth
+	}
+
+	return depth
+}
