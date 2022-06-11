@@ -2,6 +2,7 @@ package btree
 
 // Tree is a binary tree.
 type Tree[T any] struct {
+	// cmp compares two T values.
 	cmp   func(T, T) int
 	left  *Tree[T]
 	right *Tree[T]
