@@ -46,6 +46,8 @@
     - Heaps
   - Non-Linear
     - Trees
+      - [binary-tree](./src/struct/non-linear/trees/binary-tree)
+      - [AVL-tree](./src/struct/non-linear/trees/avl-tree)
       - B-Tree
         - b-tree
         - b+ tree
