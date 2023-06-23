@@ -29,6 +29,14 @@ func BenchmarkTwoSum_N_LOG_N(b *testing.B) {
 	}
 }
 
+func BenchmarkTwoSum_N_LOG_N_BINARY_SEARCH(b *testing.B) {
+	data, target := generateTestData(10000)
+	b.ResetTimer()
+	for i := 0; i < b.N; i++ {
+		TwoSum_N_LOG_N_BINARY_SEARCH(data, target)
+	}
+}
+
 func BenchmarkTwoSum_N(b *testing.B) {
 	data, target := generateTestData(10000)
 	b.ResetTimer()

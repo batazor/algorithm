@@ -33,6 +33,29 @@ func TwoSum_N_LOG_N(in []int, target int) []int {
 	return nil
 }
 
+func TwoSum_N_LOG_N_BINARY_SEARCH(in []int, target int) []int {
+	if ok := sort.IntsAreSorted(in); !ok {
+		sort.Ints(in)
+	}
+
+	for i := 0; i < len(in); i++ {
+		sum := target - in[i]
+		left, right := i+1, len(in)-1
+		for left <= right {
+			mid := (left + right) / 2
+			if in[mid] == sum {
+				return []int{in[i], in[mid]}
+			} else if in[mid] < sum {
+				left = mid + 1
+			} else {
+				right = mid - 1
+			}
+		}
+	}
+
+	return nil
+}
+
 func TwoSum_N(in []int, target int) []int {
 	if ok := sort.IntsAreSorted(in); !ok {
 		sort.Ints(in)
